@@ -1,0 +1,25 @@
+qrsystem:
+  url: http://localhost:1080/production
+
+prefix:
+    stringProp1: propValue1
+    stringProp2: propValue2
+    intProp1: 10
+    listProp:
+        - listValue1
+        - listValue2
+    mapProp:
+        key1: mapValue1
+        key2: mapValue2
+
+logging:
+  file: logs/production.log
+  pattern:
+    file: "%d %-5level [%thread] %logger{0} : %msg%n"
+  level:
+    org.springframework.web: DEBUG
+    guru.springframework.controllers: DEBUG
+
+spring:
+  profiles:
+    active: production
